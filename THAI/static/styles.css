@@ -1,0 +1,76 @@
+html{
+    font-family:  Georgia, serif;
+    box-sizing: border-box !important ;
+    color: #000;
+}
+
+body{
+    background-color: #DBDBDB;
+    text-align: center;
+  }
+
+.head-bar{
+    color: #fff;
+    background-image: 	linear-gradient(#0602FF,#22214F);
+    width: calc(100% - 20px);
+    top: 0;
+    left: 0;
+    font-family: Georgia, serif;
+    letter-spacing: 1px;
+    text-shadow: 4px 4px 3px black;
+    border: 10px ridge ;
+}
+
+.notes{
+    width: 80%;
+    max-width: 1500px;
+    margin: 10px auto 0 ;
+}
+
+.notes-table, th, td{
+    border: 1px solid;
+
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.name{
+    width: 20%;
+}
+
+.note{
+    width: 80%;
+}
+
+.notes-table{
+    margin: 10px auto;
+}
+
+.fixed-width {
+    width: 150px; /* Adjust this value as needed */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+.button{
+    width: 150px;
+    border: 10px ridge ;
+    position: fixed;
+    letter-spacing: 1px;
+    color: #fff;
+    background-image: 	linear-gradient(#0602FF,#22214F);
+}
+
+.button :hover{
+    color: #FFFA55;
+    font-weight: bold;
+}
+
+.button a{
+    color: #fff;
+}

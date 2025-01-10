@@ -1,0 +1,64 @@
+{% extends "index.html" %}
+
+{% block main %}
+
+    <div class="button">
+        <p><a href="#make-note">บันทึกคำศัพท์</a></p>
+    </div>
+
+    <div class="head-bar">
+        <h1>🧾พจนานุกรมคำศัพท์สมัยใหม่🧾</h1>
+        <p>"😋พจนานุกรมส่วนตัวสำหรับจดคำศัพท์สมัยใหม่ที่คนยุคใหม่เค้าใช้กัล😝"</p>
+    </div>
+
+    <div class="head-bar" id="make-note">
+        <h2>🖊บันทึกคำศัพท์🖊</h2>
+        <form action="/" method="post" >
+
+            <div>
+
+            <div>
+            <label class="input-header">คำศัพท์😍🤩</label>
+            <input name="name" placeholder="คำศัพท์" type="text">
+            </div>
+
+            <div>
+            <label class="input-header">🥰ความหมาย🥰</label>
+            <textarea name="note" placeholder="ความหมาย"></textarea>
+            </div>
+
+            <input type="submit" id="submit">
+
+            </div>
+
+        </form>
+    </div>
+
+
+    <section>
+        <div class="notes">
+
+            <h2>คำศัพท์ทั้งหมด</h2>
+            <table class="notes-table">
+                <thead>
+                    <tr>
+                        <th class="name">คำศัพท์</th>
+                        <th class="note">ความหมาย</th>
+                        <th class="name">ลบคำศัพท์</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- TODO: Loop through the database entries to display them in this table -->
+                    {% for note in notes %}
+                        <tr>
+                            <td class="fixed-width">{{ note.name }}</td>
+                            <td class="fixed-width">{{ note.note }}</td>
+                            <td><button onclick="deleteRow(this, {{ note.id }})">💀</button></td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+{% endblock %}
